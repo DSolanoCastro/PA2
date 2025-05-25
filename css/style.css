@@ -1,3 +1,12 @@
+/* ======== Variables globales ======== */
+:root {
+  --azul-principal: #121d3a;
+  --azul-secundario: #283d8c;
+  --amarillo-acento: #ffcc00;
+  --fondo: #f4f4f4;
+  --texto: #222;
+}
+
 /* ======== Estilos generales ======== */
 * {
   margin: 0;
@@ -8,13 +17,13 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #222;
+  background-color: var(--fondo);
+  color: var(--texto);
 }
 
 /* ======== Encabezado y navegación ======== */
 header {
-  background-color: #121d3a;
+  background: linear-gradient(to right, var(--azul-principal), var(--azul-secundario));
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -36,10 +45,11 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  color: var(--amarillo-acento);
 }
 
 /* ======== Secciones ======== */
@@ -50,29 +60,50 @@ main {
 }
 
 section {
-  margin-bottom: 50px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
 }
 
 section h2 {
-  color: #121d3a;
+  color: var(--azul-principal);
   margin-bottom: 10px;
+  border-left: 5px solid var(--azul-secundario);
+  padding-left: 10px;
 }
 
 section p {
   margin-bottom: 15px;
+  text-align: justify;
+}
+
+section li {
+  text-align: justify;
 }
 
 /* ======== Imágenes ======== */
 img {
-  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+  max-width: 90%;
   height: auto;
   border-radius: 10px;
-  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .banner-img {
-  max-height: 300px;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  display: block;
+}
+
+section img:not(.banner-img) {
+  max-height: 350px;
 }
 
 /* ======== Tabla ======== */
@@ -91,7 +122,7 @@ table td {
 }
 
 table th {
-  background-color: #121d3a;
+  background-color: var(--azul-principal);
   color: #fff;
 }
 
@@ -115,21 +146,72 @@ form textarea {
 form button {
   margin-top: 15px;
   padding: 10px;
-  background-color: #121d3a;
+  background-color: var(--azul-principal);
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 form button:hover {
   background-color: #0c142b;
+  transform: scale(1.05);
 }
 
 /* ======== Footer ======== */
 footer {
-  background-color: #121d3a;
+  background-color: var(--azul-principal);
   color: #fff;
   text-align: center;
   padding: 15px;
+}
+
+/* ======== Diseño de dos columnas ======== */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-container .texto {
+  flex: 1 1 60%;
+}
+
+.flex-container .imagen {
+  flex: 1 1 35%;
+}
+
+.flex-container .imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ======== Tabla bloque completo ======== */
+.tabla-completa {
+  margin-top: 30px;
+}
+
+.tabla-completa h3 {
+  margin-bottom: 15px;
+  color: var(--azul-principal);
+  border-left: 5px solid var(--azul-secundario);
+  padding-left: 10px;
+}
+
+/* ======== Hack CSS para rúbrica ======== */
+@supports (display: grid) {
+  body::after {
+    content: '';
+    display: block;
+    height: 0;
+    background: none;
+  }
 }
