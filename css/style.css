@@ -86,6 +86,34 @@ section li {
   text-align: justify;
 }
 
+/* ======== Video educativo (nuevo) ======== */
+.video-educativo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.video-educativo .video {
+  flex: 1 1 55%;
+}
+
+.video-educativo .descripcion-video {
+  flex: 1 1 40%;
+}
+
+.video-educativo .descripcion-video h2 {
+  color: var(--azul-principal);
+  border-left: 5px solid var(--azul-secundario);
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.video-educativo .descripcion-video p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
 /* ======== Sección de mapa y descripción ======== */
 .mapa-alerta {
   display: flex;
