@@ -12,7 +12,7 @@
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Información</a></li>
+        <li><a href="about.html" class="active">Información</a></li>
         <li><a href="contact.html">Contacto</a></li>
       </ul>
     </nav>
@@ -23,19 +23,21 @@
       <div class="flex-container">
         <div class="texto">
           <h2>Definición y amenazas comunes</h2>
-          <p>La ciberseguridad se refiere a las técnicas y prácticas que protegen los sistemas, redes y datos digitales frente a ataques, accesos no autorizados o daños.</p>
-          <p>Entre las amenazas más comunes se encuentran:</p>
+          <p>La <strong>ciberseguridad</strong> es el conjunto de prácticas y herramientas diseñadas para proteger la información digital y los sistemas conectados contra accesos no autorizados, ataques o daños. Su objetivo es mantener la confidencialidad, integridad y disponibilidad de los datos.</p>
+          <p>Hoy en día, cualquier persona que use internet está expuesta a riesgos digitales. Por eso, entender las amenazas más comunes es clave para mantenerse protegido.</p>
+          <p><strong>Principales amenazas:</strong></p>
           <ul>
-            <li><strong>Phishing:</strong> Correos o mensajes falsos que intentan robar tus contraseñas o datos bancarios.</li>
-            <li><strong>Malware:</strong> Programas maliciosos que pueden dañar tu dispositivo o robar información.</li>
-            <li><strong>Robo de identidad:</strong> Uso no autorizado de tus datos personales para cometer fraudes.</li>
+            <li><strong>Malware:</strong> programas maliciosos como virus, troyanos o ransomware que dañan sistemas o roban información.</li>
+            <li><strong>Phishing:</strong> correos o mensajes falsos que intentan engañar al usuario para robar datos personales.</li>
+            <li><strong>Spyware:</strong> software que espía la actividad del usuario sin su consentimiento.</li>
+            <li><strong>Fuerza bruta:</strong> ataques que prueban múltiples combinaciones de contraseñas hasta adivinar la correcta.</li>
+            <li><strong>Ingeniería social:</strong> técnicas de manipulación psicológica para lograr que la persona entregue información sensible.</li>
           </ul>
         </div>
         <div class="imagen">
           <figure>
-            <img src="img/hackers.jpg" alt="Amenazas digitales">
-            <figcaption>Representación visual de amenazas en línea</figcaption>
-          </figure>
+            <img src="img/grafico-amenazas.svg" alt="Gráfico sobre amenazas en ciberseguridad">
+            </figure>
         </div>
       </div>
     </section>
@@ -105,10 +107,9 @@
 
     <section>
       <h2>Gráfico SVG</h2>
-      <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="80" fill="dodgerblue" />
-        <text x="100" y="110" font-size="20" text-anchor="middle" fill="#fff">SVG</text>
-      </svg>
+      <div class="svg-contenedor">
+        <img src="img/grafico.svg" alt="Gráfico SVG informativo sobre ciberseguridad">
+      </div>
     </section>
   </main>
 
@@ -117,4 +118,3 @@
   </footer>
 </body>
 </html>
-

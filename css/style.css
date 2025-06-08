@@ -350,6 +350,17 @@ footer {
   border-radius: 10px;
 }
 
+/* ======== Imagen de amenazas ciberseguridad ======== */
+.flex-container .imagen figure {
+  text-align: center;
+}
+
+.flex-container .imagen figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
 /* ======== Tabla bloque completo ======== */
 .tabla-completa {
   margin-top: 30px;
